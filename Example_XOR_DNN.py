@@ -3,7 +3,7 @@ import keras
 import streamlit as st
 
 # Load the Keras model
-loaded_model = keras.models.load_model('keras_model.h5')
+loaded_model = keras.models.load_model('https://github.com/khl-hamdaoui/Example_XOR/blob/main/keras_model.h5')
 # creating a function for Prediction
 def XOR(input_data):   
     # changing the input_data to numpy array
