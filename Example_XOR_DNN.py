@@ -2,8 +2,18 @@ import numpy as np
 import keras
 import streamlit as st
 
+import requests
+
+# Download the model file from GitHub
+url = 'https://github.com/khl-hamdaoui/Example_XOR/raw/main/keras_model.h5'
+response = requests.get(url)
+with open('keras_model.h5', 'wb') as f:
+    f.write(response.content)
+
+# Load the Keras model from the local file
+loaded_model = keras.models.load_model('keras_model.h5')
 # Load the Keras model
-loaded_model = keras.models.load_model('https://github.com/khl-hamdaoui/Example_XOR/blob/main/keras_model.h5')
+#loaded_model = keras.models.load_model('https://github.com/khl-hamdaoui/Example_XOR/blob/main/keras_model.h5')
 # creating a function for Prediction
 def XOR(input_data):   
     # changing the input_data to numpy array
