@@ -1,7 +1,8 @@
 import numpy as np
 import keras
 import streamlit as st
-
+from keras.models import Sequential
+from keras.layers.core import Dense
 import requests
 
 # Download the model file from GitHub
