@@ -3,16 +3,10 @@ import keras
 import streamlit as st
 from keras.models import Sequential
 from keras.layers.core import Dense
-import requests
 
-# Download the model file from GitHub
-url = 'https://github.com/khl-hamdaoui/Example_XOR/raw/main/keras_model.h5'
-response = requests.get(url)
-with open('keras_model.h5', 'wb') as f:
-    f.write(response.content)
 
 # Load the Keras model from the local file
-loaded_model = keras.models.load_model('keras_model.h5')
+loaded_model = keras.models.load_model('https://github.com/khl-hamdaoui/Example_XOR/raw/main/keras_model.h5')
 # Load the Keras model
 #loaded_model = keras.models.load_model('https://github.com/khl-hamdaoui/Example_XOR/blob/main/keras_model.h5')
 # creating a function for Prediction
